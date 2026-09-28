@@ -1,8 +1,8 @@
 class Solution(object):
     def isAnagram(self, s, t):
-        dict={}
         if len(s)!=len(t):
             return False
+        dict={}
         for ch in s:
             dict[ch]=dict.get(ch,0)+1
         for ch in t:
@@ -10,5 +10,3 @@ class Solution(object):
                 return False
             dict[ch]-=1
         return True
-        
-        
