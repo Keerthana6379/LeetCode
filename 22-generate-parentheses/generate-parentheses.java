@@ -13,7 +13,7 @@ class Solution {
             gen(op+1,cl,s+"(",n);
         }
         if(cl<op){
-            gen(op,cl+1,s+")",n);
+            gen(op,cl+1,s+')',n);
         }
     }
 }
