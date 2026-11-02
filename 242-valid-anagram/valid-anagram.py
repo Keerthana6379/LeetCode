@@ -2,11 +2,12 @@ class Solution(object):
     def isAnagram(self, s, t):
         if len(s)!=len(t):
             return False
-        dict={}
+        count={}
         for ch in s:
-            dict[ch]=dict.get(ch,0)+1
+            count[ch]=count.get(ch,0)+1
         for ch in t:
-            if ch not in dict or dict[ch]==0:
+            if ch not in count or count[ch]==0:
                 return False
-            dict[ch]-=1
+            count[ch]-=1
         return True
+        
